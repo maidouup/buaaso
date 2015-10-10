@@ -1,5 +1,6 @@
 # buaaso
 Python：personal message search via SQL Injection Attacks 
+http://www.2cto.com/Article/201501/373188.html
 website1：http://graduate.buaa.edu.cn/ch/xuesheng/index.jhtml
 运行这个buaaso.py就可以
 
