@@ -11,7 +11,10 @@ step2:download the page and find the datas by regular expression and Python; 通
 
 step3：connect the database through the module pymssql in Python,将数据存入SQL数据库，参看http://blog.chinaunix.net/uid-27570589-id-5108429.html
 ####此部分为buaasoLib.py实现
-step4:发现buaa的图书馆，http://buaalib.com/，登录页面，一般为学号，密码也为学号，试着登录一个账号，来自上述数据库。可以再个人信息页面http://202.112.134.140:8080/reader/redr_info.php中发现，个人的基本信息，可以抓取下来，并且统计修改密码的人数。
+step4:发现buaa的图书馆，http://buaalib.com/，
+登录页面，一般为学号，密码也为学号，试着登录一个账号，来自上述数据库。可以再个人信息页面
+http://202.112.134.140:8080/reader/redr_info.php
+中发现，个人的基本信息，可以抓取下来，并且统计修改密码的人数。
  
  step5.处理数据库，用于提取可以用的用户（没有注销账号的），where substring(stuID,3,2)='13'orsubstring (stuID,3,2)='14',可以后去某个个字段的第3个字符的2个字符比较。
  
