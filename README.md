@@ -26,7 +26,9 @@ http://202.112.134.140:8080/reader/redr_info.php
  目前图书馆系统的个人信息页，身份证信息隐去。
  
  ####buaaso_GW.py 网关验证登录
+ 
  buaa网关登录，现在默认的情况，登录为学号stuID（字母小写），密码为身份证号（stuIDNum）后8位。
+
 1.buaa的网络网关登录，网页版地址为：http://gw.buaa.edu.cn/?url=www.baidu.com，
   测试发现，输入密码错误5次，则需要验证码登录，改为其他方式。
 
@@ -38,14 +40,20 @@ http://202.112.134.140:8080/reader/redr_info.php
 登录成功后自动转到http://202.112.136.131/phone/index.php
 
 登录成功有两种情况：
+
 1.出现http://202.112.136.131/phone/index.php页面：出图
 里边出现一个登录的IP，或者多个（表明用户设置了可以允许多个设备同时在线，且没有超）
+
 2.没有出现上述页面，仍是，但出现，登录人数过多的提示，说明登录成功只是人数超了。
-1.response为password_error
+
+  1.response为password_error
 成功情况：
-2.一串数字登录成功
-3.ip_exist_error		ip未下线
-4.online_num_error
+
+  2.一串数字登录成功
+
+  3.ip_exist_error		ip未下线
+
+  4.online_num_error
 
 登出http://202.112.136.131/cgi-bin/do_logout?action=logout
 get方法
@@ -53,8 +61,7 @@ get方法
 action ：'logout'
 response：连接已断开
 
-根据提交的表单
-发现密码被加密了。
+根据提交的表单，发现密码被加密了。
 加密的算法为MD5,所以要对应的去解密了。将传输的字符串加密post过去。
 
 同时还有一个注销也是在同一登录页面部分，点击注销。
